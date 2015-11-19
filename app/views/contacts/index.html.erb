@@ -1,0 +1,11 @@
+<%@contacts.each do |contact| %>
+	<h2><%= contact.name %></h2>
+	<%= link_to('Show details', contact_info_path(contact))%>
+
+	<form action="/add_favourite" method="post">
+		<button type="submit"> Add Favorite </button>
+	</form>
+
+<%end%>
+
+<%= link_to('New Contact', controller: 'contacts', action: 'new') %>
